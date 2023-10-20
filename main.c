@@ -9,8 +9,6 @@
 
 #include <stdio.h>
 
-int TestForWins(int Field[SizeX][SizeY]);
-
 int main(){
 	int Field[SizeX][SizeY] =
 	{
@@ -22,9 +20,10 @@ int main(){
 			{ 0, 0, 0, 0, 0, 0 ,0},
 			{ 0, 0, 0, 0, 0, 0, 0},
 	};
+
 	int res = TestForWins(Field);
 
-	printf("\n\n%i",res);
+	printf("%i",res);
 
 	return 1;
 }
