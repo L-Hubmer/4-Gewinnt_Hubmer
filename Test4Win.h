@@ -12,8 +12,6 @@
 #define SizeY 7
 #define WinLength 4
 
-
-
 int TestForWins(int Field[SizeX][SizeY]);
 
 
