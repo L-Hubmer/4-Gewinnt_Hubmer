@@ -40,7 +40,7 @@ int TestForWins(int Field[SizeX][SizeY]){
 				}
 			}
 			if(Ytest + WinLength < SizeY){
-				for(int ycnt; ycnt <= Winlength; ycnt++){
+				for(int ycnt; ycnt <= WinLength; ycnt++){
 					colsum += Field[Xtest][ycnt];
 				}
 			}
