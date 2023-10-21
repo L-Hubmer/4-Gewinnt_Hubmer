@@ -5,10 +5,6 @@
  *      Author: L. Hubmer
  */
 
-#define SizeX 7
-#define SizeY 7
-#define WinLength 4
-
 #include "Test4Win.h"
 
 int TestForWins(int Field[SizeX][SizeY]){
@@ -22,28 +18,28 @@ int TestForWins(int Field[SizeX][SizeY]){
 		for(int Xtest = 0; Xtest < SizeY; Xtest++){
 
 			//Colsum
-			if(Xtest + WinLength < SizeX){
+			if(Xtest + WinLength <= SizeX){
 				for(int xcnt = 0; xcnt < WinLength; xcnt++){
 					colsum += Field[Xtest + xcnt][Ytest];
 				}
 			}
 
 			//Linesum
-			if(Ytest + WinLength < SizeY){
+			if(Ytest + WinLength <= SizeY){
 				for(int ycnt = 0; ycnt < WinLength; ycnt++){
 					linesum += Field[Xtest][Ytest + ycnt];
 				}
 			}
 
 			//rqsum
-			if((Xtest + WinLength < SizeX) && (Ytest + WinLength < SizeY)){
+			if((Xtest + WinLength <= SizeX) && (Ytest + WinLength <= SizeY)){
 				for(int xycnt = 0; xycnt < WinLength; xycnt++){
 					rqsum += Field[Xtest + xycnt][Ytest + xycnt];
 				}
 			}
 
 			//lqsum
-			if((Xtest - WinLength >= -1) && (Ytest + WinLength < SizeY)){
+			if((Xtest - WinLength >= -1) && (Ytest + WinLength <= SizeY)){
 				for(int xycnt = 0; xycnt < WinLength; xycnt++){
 					lqsum += Field[Xtest - xycnt][Ytest + xycnt];
 				}
